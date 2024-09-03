@@ -5,7 +5,7 @@ Os dados devem estar armazenados e estarem relacionados na base de dados para qu
 
 Ex: Esse relacionamento entre dados é que nos permite descobrir, dada duas entidades como **Aluno** e **Turma**, a qual turma um aluno pertence.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/e0a78b5f-521d-4b1b-89a5-d338ddb6d896)
 
 Um relacionamento é representado por um losango com o nome do relacionamento no centro. O nome do 
 relacionamento representa a relação que existe entre os objetos das entidades. O nome do relacionamento pode ser um **verbo** como, por exemplo, **pertence**, **leciona**, **estuda**, **possui**, etc; ou também pode ser uma composição dos nomes das entidades como por exemplo **Aluno_Turma** em vez de **pertence**.
@@ -15,7 +15,7 @@ Um relacionamento pode ter atributos. Esses atributos são denominados **atribut
 
 Ex: Imagine que seja necessário armazenar a **data** que um **professor** lecionou determinada disciplina. O **atributo** **data** **não pertence nem à entidade Professor e nem à entidade Disciplina**. Esse atributo pertence ao relacionamento **leciona**, ou seja, é um atributo do relacionamento. E ele só deve ser preenchido com um valor, quando for feita a relação entre **professor** e **disciplina**.
 
-![atributo-descritivo](atributo-descritivo.png)
+![image](https://github.com/user-attachments/assets/fc17d054-928f-4cf7-b27b-75d82205810d)
 
 
 ## Cardinalidade
@@ -52,7 +52,7 @@ A cardinalidade Muitos para Muitos (N:N) ocorre quando um objeto de uma entidade
 
 ## Resumo - Cardinalidade
 
-![relaciomentos-er](relaciomentos-er.png)
+![image](https://github.com/user-attachments/assets/304e30af-9180-4aaa-a790-b1560b19d819)
 
 
 
@@ -66,7 +66,7 @@ Considere o exemplo em que um professor pode ministrar disciplinas para diferent
 Para que as informações possam ser armazenadas e recuperadas de forma completa, teremos que criar um relacionamento ternário entre as entidades, conforme figura abaixo:
 
 
-![relacionamento-ternario](relacionamento-ternario.png)
+![image](https://github.com/user-attachments/assets/9aa9869f-de77-484d-a35e-0ce19099badf)
 
 Poderíamos tentar criar três relacionamentos binários para o problema descrito acima, no entanto, se fizermos isso, não teremos as informações de forma completa como a temos no relacionamento ternário.
 
@@ -80,7 +80,7 @@ Este tipo especial de relacionamento é aquele que relaciona objetos de uma mesm
 
 Imagine que existam alguns poucos alunos que representam grupos de outros alunos em reuniões e assuntos estudantis. Nesse caso, um objeto aluno representa vários objetos dentro da mesma entidade.  A figura abaixo apresenta o relacionamento **representante** como um relacionamento recursivo.
 
-![relacionamento-recursivo](relacionamento-recursivo.png)
+![image](https://github.com/user-attachments/assets/2e017ea2-c18e-4ac3-bf88-875156b8b9d6)
 
 ## Herança (Generalização/Especialização)
 
@@ -90,7 +90,7 @@ Isso ocorre quando um conjunto de entidades pode conter subgrupos de entidades c
 
 A figura abaixo apresenta um exemplo de especialização entre as entidades **Pessoa**, **Professor** e **Aluno**.
 
-![especializacao](especializacao.png)
+![image](https://github.com/user-attachments/assets/036acada-4d94-44f5-a80f-88b99557036f)
 
 **Observe que a herança/especialização é indicada no diagrama por um triângulo**, e as entidades filhas estão relacionadas com a entidade pai por meio do triângulo.
 
@@ -109,11 +109,11 @@ Uma especialização pode ter quantas entidades filhas forem necessárias, inclu
 
 * **Total (T):** <!--Esse tipo de especialização é quando modelamos todas as características de uma entidade. No nosso modelo abaixo podemos dizer que a especialização das entidades Cliente e Pessoa Juridica é total, pois todas as suas características estão no modelo.-->
 
-![heranca_total](heranca_total.png)
+![image](https://github.com/user-attachments/assets/e8cb1cf1-81a2-4062-b64d-e9a3a623b34d)
 
 * **Parcial (P):** <!--Esse tipo de especialização é quando apenas modelamos as principais características de uma entidade, deixando algumas menos importantes de fora do modelo. --> <!--Mas a característica que ficar de fora deve constar no dicionário de dados.-->
 
-![heranca_parcial](heranca_parcial.png)
+![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)
 
 <!--
 * **Exclusiva (E):** Esse tipo de especialização indica que uma entidade possui uma única característica de uma única vez, ou seja se um cliente é uma pessoa física ele não pode ser uma pessoa jurídica ao mesmo tempo e vice-versa ou um livro que não pode ser nacional e importado ao mesmo tempo. Caso venha ocorrer de uma entidade ter características diferentes ao mesmo tempo, não indicamos a exclusividade.
@@ -128,17 +128,17 @@ A **agregação** ou **entidade associativa** ocorre quando precisamos relaciona
 
 Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relacionamento **Compra**. Agora, suponha que tenhamos que modificar esse modelo de modo que seja necessário saber quantas prestações serão pagas em uma compra. Relacionar a entidade **Prestação** com **Cliente** ou com **Produto** não faz sentido, uma vez que as prestações serão referentes à compra efetuada. Sendo assim, a entidade **Prestação** deve se relacionar à **Compra**, como mostra a figura abaixo. O retângulo desenhado em volta do relacionamento indica a **agregação**.
 
-![agregacao](agregacao.png)
+![image](https://github.com/user-attachments/assets/26967fad-fe10-4ff3-976d-aae6dbd2dcc4)
 
 
 É possível também reescrever o diagrama ER anterior sem utilizar agregação (ou entidade associativa). Neste caso, o relaciomento **Compra** seria transformado em uma **entidade** que poderia ser relacionada à **Prestação**, conforme figura abaixo.
 
 
-![agregacao-sem](agregacao-sem.png)
+![image](https://github.com/user-attachments/assets/6ae967fc-9585-4f5e-8696-6b7e6406b68f)
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
 
 
 # Resumo 
 
-![resumo-er](resumo-er.png)
+![image](https://github.com/user-attachments/assets/b54cb7cd-c4ab-4fc6-9fb1-0957aaa2b1fa)
