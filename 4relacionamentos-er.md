@@ -5,7 +5,7 @@ Os dados devem estar armazenados e estarem relacionados na base de dados para qu
 
 Ex: Esse relacionamento entre dados é que nos permite descobrir, dada duas entidades como **Aluno** e **Turma**, a qual turma um aluno pertence.
 
-![relacionamento](relacionamento.png)
+![Uploading image.png…]()
 
 Um relacionamento é representado por um losango com o nome do relacionamento no centro. O nome do 
 relacionamento representa a relação que existe entre os objetos das entidades. O nome do relacionamento pode ser um **verbo** como, por exemplo, **pertence**, **leciona**, **estuda**, **possui**, etc; ou também pode ser uma composição dos nomes das entidades como por exemplo **Aluno_Turma** em vez de **pertence**.
