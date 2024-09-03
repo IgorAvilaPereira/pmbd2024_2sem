@@ -24,7 +24,8 @@ Uma **entidade** representa um conjunto de objetos do mesmo tipo do mundo real e
 
 Uma **entidade** é representada graficamente por um retângulo com o nome da entidade dentro do retângulo
 
-![entidade](entidade.png)
+![image](https://github.com/user-attachments/assets/bedd3d95-4f00-4a5f-baf7-07f8eea337ab)
+
 
 ## Atributos
 
@@ -34,11 +35,11 @@ Além de uma **entidade** representar objetos do mundo real, ela também deve po
 
 Um atributo pode ser representado graficamente por uma elipse com o nome do atributo dentro da elipse. A elipse é ligada à entidade por uma linha.
 
-![atributos](atributos.png)
+![image](https://github.com/user-attachments/assets/d0ffc164-24a3-4d3a-90df-014dbb93ad0e)
 
 Outra forma de representação utilizada por algumas ferramentas é representar o atributo como uma "bolinha" ligada à entidade e com o nome do atributo ao lado.
 
-![outra-notacao-er](outra-notacao-er.png)
+![image](https://github.com/user-attachments/assets/d212a04f-255d-47d1-a307-5ddf91737248)
 
 ### Tipos de Atributos
 
@@ -88,13 +89,13 @@ Este tipo de atributo é representado graficamente por duas elipses (uma dentro 
 
 Este tipo de atributo é representado por uma elipse  pontilhada.
 
-## Atributo Chave/Chave Primária/Identificador
+## Atributo Chave/Identificador
 
 Um conceito importante no Modelo de Entidade Relacionamento é o conceito de **atributo identificador**. 
 <!--A **chave primária** (*Primary Key* ou **PK**) é  um atributo da entidade-->
 O **atributo identificador** identifica apenas um objeto dessa entidade. Portanto, o valor dentro de um atributo identificador não poderá se repetir e também não poderá receber um valor nulo.
 
-O **atributo-identificador** também é conhecido como **atributo-chave** ou, até mesmo, como **chave primária (*Primary Key* ou PK)**. Nas seções seguintes, usaremos estes termos como sendo sinônimos mas é preciso compreender que o conceito de **chave primária** é mais adequado de ser utilizado quando estamos trabalhando com modelagem lógica (2ª etapa do projeto de um BD) e não durante o desenvolvimento do modelo conceitual e, mais especificamente, construindo o diagrama ER (1ª etapa).
+O **atributo-identificador** também é conhecido como **atributo-chave** ou, até mesmo, como **chave primária (*Primary Key* ou PK)**. Nas seções seguintes, usaremos estes termos como sendo sinônimos mas é preciso compreender que o conceito de **chave primária** é mais adequado de ser utilizado quando estamos trabalhando com modelagem lógica (2ª etapa do projeto de um BD) e não durante o desenvolvimento do modelo conceitual e, mais especificamente, durante a construção do diagrama ER (1ª etapa).
 
 <!--
 >> **identificador: ** conjunto de atributos e relacionamentos cujos valores distinguem uma ocorrência da entidade das demais
@@ -131,8 +132,8 @@ Como os atributos individualmente podem ser repetir, vamos tentar uma chave prim
 
 ## Resumo - Representação Gráfica - Atributos
 
-![tipos-atributos](tipos-atributos.png)
+![image](https://github.com/user-attachments/assets/ffe6c4ca-a438-4cb6-9d69-076a9637aafb)
 
-## Conteúdo complementar
+<!--## Conteúdo complementar
 
-[Slides](2introducao-er.pdf)
+[Slides](2introducao-er.pdf)-->
