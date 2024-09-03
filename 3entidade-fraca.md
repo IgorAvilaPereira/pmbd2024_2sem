@@ -12,7 +12,7 @@ Livros de banco de dados, geralmente, representam a entidade fraca por um retân
 
 **Entidades fracas são representadas por meio de retângulos com bordas duplas**. Os **relacionamentos envolvendo entidades fracas são representados por meio de losangos com bordas duplas**. Normalmente, **chaves parciais são sublinhadas com linhas pontilhadas**.
 
-![entidade-fraca](entidade-fraca.png)
+![image](https://github.com/user-attachments/assets/66f739fa-58e8-4c54-8649-db5aa7108689)
 
 <!--
 Os tipos de entidades que não possuem atributos-chaves são denominados de fracas, diferente dos tipos de entidades que possuem (ao menos um) atributo-chave, denominadas entidades fortes (ou regulares).
@@ -22,7 +22,8 @@ Um tipo de entidade fraca sempre atende a restrição de participação total no
 
 Uma de entidade fraca tem, normalmente, uma **chave parcial**. Ela corresponde ao conjunto de atributos que pode identificar unicamente as entidades fracas relacionadas à mesma entidade forte proprietária. Abaixo apresentamos um ER com uma entidade fraca que contém uma chave parcial (atributo **Nome**). As chaves parciais são representadas graficamente por sublinhado pontilhado. Neste exemplo é possível identificar um **Dependente** a partir da combinação da chave parcial da própria Entidade **Dependente** (**Nome**) com o **atributo chave da Entidade forte relacionada**, ou seja, observando o **atributo chave** do **Empregado** (**Cpf**) jutamente com a chave parcial de **Dependente** é possível identificar um Dependente único.
 
-![entidade-fraca2](entidade-fraca2.png)
+![image](https://github.com/user-attachments/assets/bf55f7f7-a01b-493c-a546-fc63816fd624)
+
 
 Se um **Empregado** é excluído:
 
