@@ -26,9 +26,11 @@ O identificador parcial corresponde ao conjunto de atributos que pode identifica
 
 Além disso, com frequência, sinalizamos a participação total entre a entidade fraca e sua entidade forte. Mas, o que seria participação total? É quando em um relacionamento todas as instância de uma entidade devem estar associada alguma outra instância de outra entidade. E isso é exatamente o que acontece entre entidades que participam de um relacionamento entre entidades forte e fraca. Obs: a participação total pode acontecer também entre relacionamentos de entidades fortes (onde a cardinalidade mínima seja 1).
 
-![image](https://github.com/user-attachments/assets/bf55f7f7-a01b-493c-a546-fc63816fd624)
+<!--![image](https://github.com/user-attachments/assets/bf55f7f7-a01b-493c-a546-fc63816fd624)-->
 
-## Entidade Fraca - Forma alternativa de Pensar
+![Diagram1](https://github.com/user-attachments/assets/554ff466-3ef1-4378-9d53-e2e6691c1a3f)
+
+## OFF-TOPIC: Entidade Fraca - Uma Forma alternativa de Pensar
 
 Se um **Empregado** é excluído:
 
