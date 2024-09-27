@@ -124,15 +124,13 @@ No exemplo, a especialização é um caso de **total** se considerarmos que uma 
 
 ## Entidade Associativa (Agregação)
 
-A **agregação** ou **entidade associativa** ocorre quando precisamos relacionar dois relacionamentos entre si.
+**Entidade associativa** ocorre quando precisamos relacionar dois relacionamentos entre si.
 
-Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relacionamento **Compra**. Agora, suponha que tenhamos que modificar esse modelo de modo que seja necessário saber quantas prestações serão pagas em uma compra. Relacionar a entidade **Prestação** com **Cliente** ou com **Produto** não faz sentido, uma vez que as prestações serão referentes à compra efetuada. Sendo assim, a entidade **Prestação** deve se relacionar à **Compra**, como mostra a figura abaixo. O retângulo desenhado em volta do relacionamento indica a **agregação**.
+Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relacionamento **Compra**. Agora, suponha que tenhamos que modificar esse modelo de modo que seja necessário saber quantas prestações serão pagas em uma compra. Relacionar a entidade **Prestação** com **Cliente** ou com **Produto** não faz sentido, uma vez que as prestações serão referentes à compra efetuada. Sendo assim, a entidade **Prestação** deve se relacionar à **Compra**, como mostra a figura abaixo. O retângulo desenhado em volta do relacionamento indica que o relacionamento tornou-se uma **entidade associativa**.
 
 ![image](https://github.com/user-attachments/assets/26967fad-fe10-4ff3-976d-aae6dbd2dcc4)
 
-
-É possível também reescrever o diagrama ER anterior sem utilizar agregação (ou entidade associativa). Neste caso, o relaciomento **Compra** seria transformado em uma **entidade** que poderia ser relacionada à **Prestação**, conforme figura abaixo.
-
+É possível também reescrever o diagrama ER anterior sem utilizar entidade associativa. Neste caso, o relaciomento **Compra** seria transformado em uma **entidade** que poderia ser relacionada à **Prestação**, conforme figura abaixo.
 
 ![image](https://github.com/user-attachments/assets/6ae967fc-9585-4f5e-8696-6b7e6406b68f)
 
@@ -152,7 +150,7 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 
 ### Entidade Associativa
 
-* **Definição:** Uma entidade associativa (ou entidade fraca) é uma entidade que representa um relacionamento entre duas ou mais entidades e possui seus próprios atributos.
+* **Definição:** Uma entidade associativa é uma entidade que representa um relacionamento entre duas ou mais entidades e possui seus próprios atributos.
 
 * **Uso:** Utilizada quando o relacionamento precisa ser tratado como uma entidade independente, especialmente quando possui muitos atributos ou precisa se relacionar com outras entidades. Por exemplo, em um relacionamento ***Empresta*** entre ***Aluno*** e ***Livro***, a entidade associativa ***Empréstimo*** pode ter atributos como ***Data de Empréstimo*** e ***Data de Devolução***.
 
