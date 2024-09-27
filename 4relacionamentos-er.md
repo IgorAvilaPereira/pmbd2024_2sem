@@ -122,7 +122,7 @@ Uma especialização pode ter quantas entidades filhas forem necessárias, inclu
 No exemplo, a especialização é um caso de **total** se considerarmos que uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (exclusiva) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->
 
 
-## Entidade Associativa (Agregação)
+## Entidade Associativa 
 
 **Entidade associativa** ocorre quando precisamos relacionar dois relacionamentos entre si.
 
@@ -136,6 +136,9 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
 
+**Muito Importante:** entidades associativas, geralmente, parecem entre relacionamentos n:m. Em relacionamentos muitos-para-muitos (N:M), é comum usar uma entidade associativa para gerenciar as instâncias do relacionamento. Isso permite que você adicione atributos específicos do relacionamento, como data de início, quantidade, etc., que não fariam sentido nas entidades originais. 
+
+<!--
 ### Entidade Associativa vs Relacionamento com Atributos
 
 ### Relacionamento com Atributos
@@ -157,6 +160,8 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 * **Vantagens:** Maior flexibilidade e clareza em diagramas complexos, permitindo que o relacionamento tenha seus próprios atributos e se relacione com outras entidades.
 
 * **Desvantagens:** Pode adicionar complexidade ao modelo, tornando-o mais difícil de entender e gerenciar;
+
+-->
 
 # Resumo 
 
