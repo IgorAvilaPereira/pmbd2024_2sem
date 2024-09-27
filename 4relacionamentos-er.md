@@ -142,7 +142,7 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 
 * **Atributos Descritivos:** Use quando o relacionamento tem poucos atributos simples que não justificam a criação de uma nova entidade
 
-**Muito Importante:** entidades associativas, geralmente, são criadas com mais frequência quando temos entre as entidades um relacionamento n:m. Em relacionamentos muitos-para-muitos (N:M), é comum usar uma entidade associativa para gerenciar as instâncias do relacionamento. 
+**Muito Importante:** entidades associativas, geralmente, são criadas quando temos entre as entidades um relacionamento n:m. Em relacionamentos muitos-para-muitos (N:M), é comum usar uma entidade associativa para gerenciar as instâncias do relacionamento. 
 
 <!--Isso permite que você adicione atributos específicos do relacionamento, como data de início, quantidade, etc., que não fariam sentido nas entidades originais. -->
 
