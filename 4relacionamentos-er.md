@@ -138,6 +138,27 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
 
+### Entidade Associativa vs Relacionamento com Atributos
+
+### Relacionamento com Atributos
+
+* **Definição:** Um relacionamento com atributos é um relacionamento entre duas ou mais entidades que possui seus próprios atributos.
+
+* **Uso:** Utilizado quando o relacionamento em si precisa armazenar informações adicionais. Por exemplo, em um relacionamento ***Empresta*** entre ***Aluno*** e ***Livro***, o atributo ***Data de Empréstimo*** pode ser associado diretamente ao relacionamento.
+
+* **Vantagens:** Simplicidade e clareza, especialmente quando o número de atributos do relacionamento é pequeno.
+
+* **Desvantagens:** Pode se tornar confuso se o relacionamento tiver muitos atributos ou se precisar se relacionar com outras entidades.
+
+### Entidade Associativa
+
+* **Definição:** Uma entidade associativa (ou entidade fraca) é uma entidade que representa um relacionamento entre duas ou mais entidades e possui seus próprios atributos.
+
+* **Uso:** Utilizada quando o relacionamento precisa ser tratado como uma entidade independente, especialmente quando possui muitos atributos ou precisa se relacionar com outras entidades. Por exemplo, em um relacionamento ***Empresta*** entre ***Aluno*** e ***Livro***, a entidade associativa ***Empréstimo*** pode ter atributos como ***Data de Empréstimo*** e ***Data de Devolução***.
+
+* **Vantagens:** Maior flexibilidade e clareza em diagramas complexos, permitindo que o relacionamento tenha seus próprios atributos e se relacione com outras entidades.
+
+* **Desvantagens:** Pode adicionar complexidade ao modelo, tornando-o mais difícil de entender e gerenciar;
 
 # Resumo 
 
