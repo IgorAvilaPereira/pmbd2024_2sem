@@ -136,7 +136,15 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
 
-**Muito Importante:** entidades associativas, geralmente, parecem entre relacionamentos n:m. Em relacionamentos muitos-para-muitos (N:M), é comum usar uma entidade associativa para gerenciar as instâncias do relacionamento. Isso permite que você adicione atributos específicos do relacionamento, como data de início, quantidade, etc., que não fariam sentido nas entidades originais. 
+### Quando usar Entidade Associativa e Quando Usar Atributo descritivo (atributo de relacionamento)
+
+* **Entidades Associativas:** Use quando o relacionamento tem múltiplos atributos ou quando esses atributos são complexos e precisam ser tratados como uma entidade separada.
+
+* **Atributos Descritivos:** Use quando o relacionamento tem poucos atributos simples que não justificam a criação de uma nova entidade
+
+*Muito Importante:** entidades associativas, geralmente, são criadas com mais frequência quando temos entre as entidades um relacionamento n:m. Em relacionamentos muitos-para-muitos (N:M), é comum usar uma entidade associativa para gerenciar as instâncias do relacionamento. 
+
+<!--Isso permite que você adicione atributos específicos do relacionamento, como data de início, quantidade, etc., que não fariam sentido nas entidades originais. -->
 
 <!--
 ### Entidade Associativa vs Relacionamento com Atributos
