@@ -102,9 +102,9 @@ Uma especialização pode ter quantas entidades filhas forem necessárias, inclu
 
 ### Tipos de Especialização/Generalização
 
-No exemplo, a especialização é um caso de **total** e **disjunta** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (exclusiva) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" e um "d" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->
+No exemplo, a especialização é um caso de **total** e **exclusiva (disjunta)** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (sempre pertencerá a uma entidade filha e somente uma) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" e um "d" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->. Em ocasiões onde seja possível que uma mesma instância seja, simultaneamente, mais de uma entidade filha (caso raros) dizemos que a entidade é **sobreposta** ou **não-exclusiva**.
 
-![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)
+<!--![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)-->
 
 Além dos tipos de especialzação/generalização já comentados acima, temos os seguintes tipos:
 
