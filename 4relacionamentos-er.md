@@ -82,9 +82,9 @@ Imagine que existam alguns poucos alunos que representam grupos de outros alunos
 
 ![image](https://github.com/user-attachments/assets/2e017ea2-c18e-4ac3-bf88-875156b8b9d6)
 
-## Herança (Generalização/Especialização)
+## Generalização/Especialização
 
-Herança (ou Especialização) consiste na subdivisão de uma entidade mais genérica (ou entidade pai) em um conjunto de entidades especializadas (ou entidades filhas).
+Generalização/Especialização consiste na subdivisão de uma entidade mais genérica (ou entidade pai) em um conjunto de entidades especializadas (ou entidades filhas).
 
 Isso ocorre quando um conjunto de entidades pode conter subgrupos de entidades com atributos específicos a cada subgrupo. Esse processo tem por finalidade refinar o esquema da base de dados, tornando-o mais específico.
 
@@ -92,7 +92,7 @@ A figura abaixo apresenta um exemplo de especialização entre as entidades **Pe
 
 ![image](https://github.com/user-attachments/assets/036acada-4d94-44f5-a80f-88b99557036f)
 
-**Observe que a herança/especialização é indicada no diagrama por um triângulo**, e as entidades filhas estão relacionadas com a entidade pai por meio do triângulo.
+**Observe que a Generalização/Especialização é indicada no diagrama por um triângulo**, e as entidades filhas estão relacionadas com a entidade pai por meio do triângulo.
 
 As entidades *herdam* todos os atributos da entidade pai e, portanto, não se devem repetir atributos da entidade pai nas entidades filhas. **Isso significa que os atributos que aparecem na entidade pai são os atributos que existem em comum entre as entidades filhas**. 
 
@@ -100,7 +100,7 @@ As entidades *herdam* todos os atributos da entidade pai e, portanto, não se de
 
 Uma especialização pode ter quantas entidades filhas forem necessárias, inclusive uma, se for o caso. Além disso, uma entidade filha pode também ser entidade pai para outra especialização.
 
-obs: herança múltipla não é permitida, ou seja, nenhuma entidade filha (Especializada) deve ter mais de uma entidade pai.
+obs: Generalização/Especialização múltipla não é permitida, ou seja, nenhuma entidade filha (especializada) deve ter mais de uma entidade pai.
 
 ### Tipos de Especialização/Generalização
 
