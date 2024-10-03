@@ -118,10 +118,11 @@ De forma resumida, temos os seguintes tipos de especialização e generalizaçã
 
 * **Não-exclusiva** ou **Sobreposta (s)**: Uma instância da entidade pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
 
-![image](https://github.com/user-attachments/assets/1b567cc1-4f5f-4297-88a2-b337b91f0df5)
+<!--![image](https://github.com/user-attachments/assets/1b567cc1-4f5f-4297-88a2-b337b91f0df5)-->
 
 <!--![image](https://github.com/user-attachments/assets/61f0e5e1-2868-49a9-818c-8e13b782be60)-->
 
+![image](https://github.com/user-attachments/assets/b29357ce-160e-46aa-9dde-e8e6cab7eeee)
 
 ## Entidade Associativa 
 
