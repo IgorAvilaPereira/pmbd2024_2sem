@@ -100,27 +100,37 @@ As entidades *herdam* todos os atributos da entidade pai e, portanto, não se de
 
 Uma especialização pode ter quantas entidades filhas forem necessárias, inclusive uma, se for o caso. Além disso, uma entidade filha pode também ser entidade pai para outra especialização.
 
-### Tipos
+### Tipos de Especialização/Generalização
 
+No exemplo, a especialização é um caso de **total** e **disjunta** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (exclusiva) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" e um "d" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->
+
+![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)
+
+Além dos tipos de especialzação/generalização já comentados acima, temos os seguintes tipos:
+
+* **Total**: Toda instância da entidade genérica deve pertencer a pelo menos uma das entidades especializadas. Por exemplo, todo Veículo deve ser ou um Carro ou uma Moto.
+
+* **Parcial**: Nem toda instância da entidade genérica precisa pertencer a uma entidade especializada. Por exemplo, nem todo Funcionário precisa ser um Motorista ou uma Secretária.
+
+* **Exclusiva** ou **Disjunta**: Uma instância da entidade genérica pode pertencer a apenas uma entidade especializada. Por exemplo, um Veículo pode ser ou um Carro ou uma Moto, mas não ambos.
+
+* **Não-exclusiva** ou **Sobreposta**: Uma instância da entidade genérica pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
 
 <!--Agora que modelamos as especializações da entidade Cliente, podemos complementar nosso modelo indicando qual o tipo de especialização está modelado. -->
 
 <!--Existem três tipos de especialização que podemos modelar e são essas:-->
 
+<!--
 * **Total (T):** <!--Esse tipo de especialização é quando modelamos todas as características de uma entidade. No nosso modelo abaixo podemos dizer que a especialização das entidades Cliente e Pessoa Juridica é total, pois todas as suas características estão no modelo.-->
 
 ![image](https://github.com/user-attachments/assets/e8cb1cf1-81a2-4062-b64d-e9a3a623b34d)
 
 * **Parcial (P):** <!--Esse tipo de especialização é quando apenas modelamos as principais características de uma entidade, deixando algumas menos importantes de fora do modelo. --> <!--Mas a característica que ficar de fora deve constar no dicionário de dados.-->
 
-![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)
-
+-->
 <!--
 * **Exclusiva (E):** Esse tipo de especialização indica que uma entidade possui uma única característica de uma única vez, ou seja se um cliente é uma pessoa física ele não pode ser uma pessoa jurídica ao mesmo tempo e vice-versa ou um livro que não pode ser nacional e importado ao mesmo tempo. Caso venha ocorrer de uma entidade ter características diferentes ao mesmo tempo, não indicamos a exclusividade.
 -->
-
-No exemplo, a especialização é um caso de **total** se considerarmos que uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (exclusiva) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->
-
 
 ## Entidade Associativa 
 
