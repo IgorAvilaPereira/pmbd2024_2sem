@@ -100,6 +100,8 @@ As entidades *herdam* todos os atributos da entidade pai e, portanto, não se de
 
 Uma especialização pode ter quantas entidades filhas forem necessárias, inclusive uma, se for o caso. Além disso, uma entidade filha pode também ser entidade pai para outra especialização.
 
+obs: herança múltipla não é permitida, ou seja, nenhuma entidade filha (Especializada) deve ter mais de uma entidade pai.
+
 ### Tipos de Especialização/Generalização
 
 No exemplo, a especialização é um caso de **total** e **exclusiva (ou disjunta)** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (sempre pertencerá a uma entidade filha e somente uma) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especialização/generalização é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. Nota-se, obviamente, que especializações **parciais** também podem ser **exclusivas**. Por outro lado, em ocasiões onde seja possível que uma mesma instância seja, simultaneamente, mais de uma entidade filha (caso raros) dizemos que a entidade é **não-exclusiva** (ou **sobreposta**).
