@@ -129,7 +129,10 @@ De forma resumida, temos os seguintes tipos de especialização e generalizaçã
 <!--![image](https://github.com/user-attachments/assets/2c1113cb-081b-4f25-9496-4da68a58c17a)-->
 
 
-![image](https://github.com/user-attachments/assets/b29357ce-160e-46aa-9dde-e8e6cab7eeee)
+![image](https://github.com/user-attachments/assets/bbe6b60a-9814-40a3-83b2-1512371cc4e6)
+
+
+<!--![image](https://github.com/user-attachments/assets/b29357ce-160e-46aa-9dde-e8e6cab7eeee)-->
 
 ## Entidade Associativa 
 
