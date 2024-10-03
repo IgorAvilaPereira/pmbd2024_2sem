@@ -108,19 +108,26 @@ De forma resumida, temos os seguintes tipos de especialização e generalizaçã
 
 * **Total (t)**: Toda instância da entidade genérica deve pertencer **a pelo menos uma das entidades especializadas**. Por exemplo, todo Veículo deve ser ou um Carro ou uma Moto.
 
-![image](https://github.com/user-attachments/assets/e8cb1cf1-81a2-4062-b64d-e9a3a623b34d)
+<!--![image](https://github.com/user-attachments/assets/e8cb1cf1-81a2-4062-b64d-e9a3a623b34d)-->
 
 * **Parcial (p)**: **Nem toda instância da entidade precisa pertencer a uma entidade filha**. Esse tipo de especialização é quando apenas modelamos as principais entidades, deixando algumas menos importantes de fora do modelo. Por exemplo, nem todo Funcionário precisa ser um Motorista ou uma Secretária.
 
-![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)
+<!--![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)-->
 
-* **Exclusiva (e)** ou **Disjunta (d)**: Uma instância da entidade pode pertencer a apenas uma entidade especializada. Esse tipo de especialização indica que uma entidade possui uma única característica de uma única vez, ou seja se um cliente é uma pessoa física ele não pode ser uma pessoa jurídica ao mesmo tempo e vice-versa ou um livro que não pode ser nacional e importado ao mesmo tempo.  Por exemplo, um Veículo pode ser ou um Carro ou uma Moto, mas não ambos.
+* **Exclusiva** ou **Disjunta**: Uma instância da entidade pode pertencer a apenas uma entidade especializada. Esse tipo de especialização indica que uma entidade possui uma única característica de uma única vez, ou seja se um cliente é uma pessoa física ele não pode ser uma pessoa jurídica ao mesmo tempo e vice-versa ou um livro que não pode ser nacional e importado ao mesmo tempo.  Por exemplo, um Veículo pode ser ou um Carro ou uma Moto, mas não ambos.
 
-* **Não-exclusiva** ou **Sobreposta (s)**: Uma instância da entidade pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
+* **Não-exclusiva** ou **Sobreposta**: Uma instância da entidade pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
 
 <!--![image](https://github.com/user-attachments/assets/1b567cc1-4f5f-4297-88a2-b337b91f0df5)-->
 
 <!--![image](https://github.com/user-attachments/assets/61f0e5e1-2868-49a9-818c-8e13b782be60)-->
+
+
+![image](https://github.com/user-attachments/assets/5061c20c-f9b9-4f38-9afd-a9617cded6fb)
+
+
+<!--![image](https://github.com/user-attachments/assets/2c1113cb-081b-4f25-9496-4da68a58c17a)-->
+
 
 ![image](https://github.com/user-attachments/assets/b29357ce-160e-46aa-9dde-e8e6cab7eeee)
 
