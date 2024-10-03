@@ -102,19 +102,19 @@ Uma especialização pode ter quantas entidades filhas forem necessárias, inclu
 
 ### Tipos de Especialização/Generalização
 
-No exemplo, a especialização é um caso de **total** e **exclusiva (disjunta)** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (sempre pertencerá a uma entidade filha e somente uma) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" e um "d" minúsculo ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especilização/herança é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. <!--Obviamente, especializações parciais também podem ser **exclusivas**.-->. Em ocasiões onde seja possível que uma mesma instância seja, simultaneamente, mais de uma entidade filha (caso raros) dizemos que a entidade é **sobreposta** ou **não-exclusiva**.
+No exemplo, a especialização é um caso de **total** e **exclusiva (ou disjunta)** já que uma uma **Pessoa** cadastrada deverá ser sempre um **Aluno** ou um **Professor** (sempre pertencerá a uma entidade filha e somente uma) <!-- e que outras especializações que existem em escolas ou universidades como, por exemplo, **Funcionário** não são necessárias para o modelo e que nunca farão parte-->. Neste tipo de especialização, **recomenda-se inserir um "t" + um "e" ou "d" minúsculos ao lado do símbolo que representa a especialização**. Em situações onde é possível que haja **Pessoas** que não sejam nem **Aluno** nem **Professor** cadastradas, a especialização/generalização é considerada **parcial**. **Assim, neste caso, deve-se colocar um "p" minúsculo ao lado do símbolo que representa tal relacionamento**. Nota-se, obviamente, que especializações parciais também podem ser **exclusivas**. Por outro lado, em ocasiões onde seja possível que uma mesma instância seja, simultaneamente, mais de uma entidade filha (caso raros) dizemos que a entidade é **não-exclusiva** (ou **sobreposta**).
 
 <!--![image](https://github.com/user-attachments/assets/aa501346-1f63-412a-812d-d3f177c5584f)-->
 
-Além dos tipos de especialzação/generalização já comentados acima, temos os seguintes tipos:
+De forma resumida, temos os seguintes tipos de especialização e generalização:
 
-* **Total**: Toda instância da entidade genérica deve pertencer a pelo menos uma das entidades especializadas. Por exemplo, todo Veículo deve ser ou um Carro ou uma Moto.
+* **Total**: Toda instância da entidade genérica deve pertencer **a pelo menos uma das entidades especializadas**. Por exemplo, todo Veículo deve ser ou um Carro ou uma Moto.
 
-* **Parcial**: Nem toda instância da entidade genérica precisa pertencer a uma entidade especializada. Por exemplo, nem todo Funcionário precisa ser um Motorista ou uma Secretária.
+* **Parcial**: **Nem toda instância da entidade precisa pertencer a uma entidade filha**. Por exemplo, nem todo Funcionário precisa ser um Motorista ou uma Secretária.
 
-* **Exclusiva** ou **Disjunta**: Uma instância da entidade genérica pode pertencer a apenas uma entidade especializada. Por exemplo, um Veículo pode ser ou um Carro ou uma Moto, mas não ambos.
+* **Exclusiva** ou **Disjunta**: Uma instância da entidade pode pertencer a apenas uma entidade especializada. Por exemplo, um Veículo pode ser ou um Carro ou uma Moto, mas não ambos.
 
-* **Não-exclusiva** ou **Sobreposta**: Uma instância da entidade genérica pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
+* **Não-exclusiva** ou **Sobreposta**: Uma instância da entidade pode pertencer a várias entidades especializadas. Por exemplo, um Funcionário pode ser tanto um Motorista quanto uma Secretária.
 
 <!--Agora que modelamos as especializações da entidade Cliente, podemos complementar nosso modelo indicando qual o tipo de especialização está modelado. -->
 
@@ -127,8 +127,6 @@ Além dos tipos de especialzação/generalização já comentados acima, temos o
 
 * **Parcial (P):** <!--Esse tipo de especialização é quando apenas modelamos as principais características de uma entidade, deixando algumas menos importantes de fora do modelo. --> <!--Mas a característica que ficar de fora deve constar no dicionário de dados.-->
 
--->
-<!--
 * **Exclusiva (E):** Esse tipo de especialização indica que uma entidade possui uma única característica de uma única vez, ou seja se um cliente é uma pessoa física ele não pode ser uma pessoa jurídica ao mesmo tempo e vice-versa ou um livro que não pode ser nacional e importado ao mesmo tempo. Caso venha ocorrer de uma entidade ter características diferentes ao mesmo tempo, não indicamos a exclusividade.
 -->
 
