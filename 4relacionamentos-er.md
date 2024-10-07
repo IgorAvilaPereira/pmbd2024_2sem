@@ -100,7 +100,7 @@ As entidades *herdam* todos os atributos da entidade pai e, portanto, não se de
 
 Uma especialização pode ter quantas entidades filhas forem necessárias, inclusive uma, se for o caso. Além disso, uma entidade filha pode também ser entidade pai para outra especialização.
 
-obs: Generalização/Especialização múltipla não é permitida, ou seja, nenhuma entidade filha (especializada) deve ter mais de uma entidade pai.
+**obs: Generalização/Especialização múltipla não é permitida, ou seja, nenhuma entidade filha (especializada) deve ter mais de uma entidade pai.**
 
 ### Tipos de Especialização/Generalização
 
