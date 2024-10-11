@@ -13,10 +13,8 @@ Por outro lado, uma boa prática seria separar os **atributos compostos** em nov
 
 Caso a entidade tenha atributos multivalorados, para cada atributo multivalorado cria-se uma nova tabela. A tabela correspondente ao atributo multivalorado vai ter como atributos o atributo multivalorado em sim + a chave primária da tabela onde o atributo multivalorado estava inserido (que vai passar como chave estrangeira para a nova tabela). As figuras abaixo apresentam um exemplo desta situação.
 
-![conversao1](conversao1.png)
+![image](https://github.com/user-attachments/assets/fdd498f7-cade-452f-a1a4-6983a3419a21)
 
-
-![conversao2](conversao2.png)
 
 ## Entidade Fraca
 
@@ -44,7 +42,9 @@ A **participação total** ocorre quando todos os objetos de uma entidade partic
 
 Por exemplo (figura abaixo), suponha que tenhamos as **entidades** *Escola* e *Professor*, nas quais se percebe que uma escola sempre tem um professor que é diretor, mas nem todo professor é um diretor. Neste tipo de relacionamento, a entidade *Escola* tem **participação total**, uma vez que **toda** escola terá um diretor. A entidade *Professor* tem **participação parcial**, uma vez que nem todo professor é diretor. Sendo assim, a entidade que participação total *Escola* é que deve receber a chave estrangeira.
 
-![conversao1para1](conversao1para1.png)
+
+![image](https://github.com/user-attachments/assets/ff354879-a944-44f8-b478-dd8c589cb8bc)
+
 
 Note que a escolha pela entidade que tem participação total é feita para evitarmos valores nulos na tabela. Uma vez que toda escola tem um diretor, não teremos valor nulo para a chave estrangeira.
 
@@ -59,7 +59,7 @@ Se o relacionamento tiver atributos descritivos, os atributos "seguem" a chave e
 Todo relacionamento recursivo gera uma chave estrangeira que faz referência à chave primária da própria tabela, conforme figura abaixo.
 
 
-![conversao-relacionamentorecursivo](conversao-relacionamentorecursivo.png)
+![image](https://github.com/user-attachments/assets/56545c84-b7f4-4961-bd75-5e77a089d6b3)
 
 Observe que na descrição do modelo relacional foi adicionado o atributo **matricula_aluno_representante** para especificar o relacionamento recursivo. Este atributo é uma chave estrangeira que faz referência ao atributo **matricula_aluno** da prória tabela **tbAluno**.
 
@@ -70,17 +70,15 @@ Para cada relacionamento entre mais de duas entidades, cria-se uma tabela conten
 
 A chave primária da nova tabela, será composta pelos atributos chaves das entidades participantes do relacionamento que tiverem cardinalidade N e, se houver necessidade, mais algum atributo descritivo. As figuras abaixo ilustram um exemplo de conversão de um relacionamento ternário (vindo do diagrama ER) para o modelo relacional.
 
-![conversao-ternario1](conversao-ternario1.png)
+![image](https://github.com/user-attachments/assets/a67b7cc9-c6dd-40d6-b0a4-a465154a711c)
 
-
-![conversao-ternario2](conversao-ternario2.png)
 
 ## Agregação
 
 Uma agregação no modelo ER vira uma tabela no modelo relacional e irá conter seus próprios atributos, mas as chaves estrangeiras de acordo com os seus relacionamentos, como mostra a figura abaixo.
 
 
-![conversao-agregacao](conversao-agregacao.png)
+![image](https://github.com/user-attachments/assets/88794942-a93a-4249-8774-a068bc416c58)
 
 
 Observe que a tabela **tbPrestacao** possui uma chave estrangeira composta. Essa chave estrangeira é composta porque a sua primária correspondente também é composta.
