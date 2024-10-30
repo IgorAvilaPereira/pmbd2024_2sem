@@ -85,3 +85,83 @@ Observe que a tabela **tbPrestacao** possui uma chave estrangeira composta. Essa
 
 
 Quanto temos uma chave primária composta, não podemos passar para outra tabela apenas parte da chave, e por esse motivo sua estrangeira correspondente também será composta.
+
+## Especialização e Generalização
+
+Mapear especializações e generalizações de diagramas ER para o modelo relacional envolve algumas etapas específicas. Aqui está um guia básico para ajudá-lo:
+
+<!--
+### Generalização
+1. **Criar uma Tabela para a Superclasse**: Crie uma tabela para a entidade genérica (superclasse) com todos os atributos comuns.
+2. **Criar Tabelas para as Subclasses**: Crie tabelas separadas para cada subclasse, incluindo os atributos específicos de cada uma.
+3. **Chave Estrangeira**: Inclua na tabela da subclasse uma chave estrangeira que referencia a chave primária da superclasse.
+
+### Especialização
+Existem duas abordagens principais para mapear especializações:-->
+
+#### 1. **Abordagem de Tabela Única**
+- **Tabela Única**: Crie uma única tabela que inclua todos os atributos da superclasse e das subclasses.
+- **Atributo Discriminador**: Adicione um atributo discriminador para indicar a qual subclasse cada registro pertence.
+
+#### 2. **Abordagem de Tabelas Separadas**
+- **Tabela para Superclasse**: Crie uma tabela para a superclasse com os atributos comuns.
+- **Tabelas para Subclasses**: Crie tabelas separadas para cada subclasse, incluindo os atributos específicos e uma chave estrangeira que referencia a chave primária da superclasse.
+
+#### 3. **Abordagem de Tabelas Totalmente Separadas**
+
+Crie tabelas separadas para cada entidade filha, incluindo os atributos específicos e os atributos oriundos da entidade pai. Neste caso, a generalização/especialização definida da etapa de modelagem conceitual (ER) será, formalmente, desfeita e pela perspectiva do modelo relacional as entidades filhas serão consideradas tabelas totalmente independentes e distintas.
+
+### Exemplo Prático
+
+Suponha que temos uma entidade pai "Veículo" com duas entidades filhas (especializações) "Carro" e "Moto":
+
+#### Abordagem de Tabela Única
+```sql
+CREATE TABLE Veiculo (
+    id INT PRIMARY KEY,
+    tipo VARCHAR(10),
+    placa VARCHAR(10),
+    ano INT,
+    numero_portas INT, -- específico para Carro
+    cilindradas INT -- específico para Moto
+);
+```
+
+#### Abordagem de Tabelas Separadas
+```sql
+CREATE TABLE Veiculo (
+    id INT PRIMARY KEY,
+    placa VARCHAR(10),
+    ano INT
+);
+
+CREATE TABLE Carro (
+    id INT PRIMARY KEY,
+    numero_portas INT,
+    FOREIGN KEY (id) REFERENCES Veiculo(id)
+);
+
+CREATE TABLE Moto (
+    id INT PRIMARY KEY,
+    cilindradas INT,
+    FOREIGN KEY (id) REFERENCES Veiculo(id)
+);
+```
+
+####  **Abordagem de Tabelas Totalmente Separadas**
+
+```sql
+CREATE TABLE Carro (
+    id INT PRIMARY KEY,
+    numero_portas INT,
+    placa VARCHAR(10),
+    ano INT
+);
+
+CREATE TABLE Moto (
+    id INT PRIMARY KEY,
+    cilindradas INT,
+    placa VARCHAR(10),
+    ano INT
+);
+```
