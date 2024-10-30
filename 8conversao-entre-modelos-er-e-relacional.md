@@ -101,7 +101,7 @@ Existem duas abordagens principais para mapear especializações:-->
 
 #### 1. **Abordagem de Tabela Única**
 - **Tabela Única**: Crie uma única tabela que inclua todos os atributos da superclasse e das subclasses.
-- **Atributo Discriminador**: Adicione um atributo discriminador para indicar a qual subclasse cada registro pertence.
+- **Coluna Discriminador**: Adicione uma coluna discriminador para indicar de qual entidade filha cada registro pertence.
 
 #### 2. **Abordagem de Tabelas Separadas**
 - **Tabela para Superclasse**: Crie uma tabela para a superclasse com os atributos comuns.
@@ -111,40 +111,42 @@ Existem duas abordagens principais para mapear especializações:-->
 
 Crie tabelas separadas para cada entidade filha, incluindo os atributos específicos e os atributos oriundos da entidade pai. Neste caso, a generalização/especialização definida da etapa de modelagem conceitual (ER) será, formalmente, desfeita e pela perspectiva do modelo relacional as entidades filhas serão consideradas tabelas totalmente independentes e distintas.
 
-### Exemplo Prático
+### Exemplo Prático (Reflexo na etapa de Implementação Física)
 
 Suponha que temos uma entidade pai "Veículo" com duas entidades filhas (especializações) "Carro" e "Moto":
 
 #### Abordagem de Tabela Única
 ```sql
 CREATE TABLE Veiculo (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     tipo VARCHAR(10),
     placa VARCHAR(10),
     ano INT,
     numero_portas INT, -- específico para Carro
-    cilindradas INT -- específico para Moto
+    cilindradas INT, -- específico para Moto
+    -- opcional (Veículo, Carro ou Moto)
+    discriminador text 
 );
 ```
 
 #### Abordagem de Tabelas Separadas
 ```sql
 CREATE TABLE Veiculo (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     placa VARCHAR(10),
     ano INT
 );
 
 CREATE TABLE Carro (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     numero_portas INT,
-    FOREIGN KEY (id) REFERENCES Veiculo(id)
+    veiculo_id integer REFERENCES Veiculo (id)
 );
 
 CREATE TABLE Moto (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     cilindradas INT,
-    FOREIGN KEY (id) REFERENCES Veiculo(id)
+    veiculo_id integer REFERENCES Veiculo(id)
 );
 ```
 
@@ -152,14 +154,14 @@ CREATE TABLE Moto (
 
 ```sql
 CREATE TABLE Carro (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     numero_portas INT,
     placa VARCHAR(10),
     ano INT
 );
 
 CREATE TABLE Moto (
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     cilindradas INT,
     placa VARCHAR(10),
     ano INT
