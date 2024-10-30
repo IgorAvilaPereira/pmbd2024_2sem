@@ -100,16 +100,16 @@ Mapear especializações e generalizações de diagramas ER para o modelo relaci
 Existem duas abordagens principais para mapear especializações:-->
 
 #### 1. **Abordagem de Tabela Única**
-- **Tabela Única**: Crie uma única tabela que inclua todos os atributos da superclasse e das subclasses.
+- **Tabela Única**: Crie uma única tabela que inclua como colunas todos os atributos da entidade pai e das entidades filhas.
 - **Coluna Discriminador**: Adicione uma coluna discriminador para indicar de qual entidade filha cada registro pertence.
 
 #### 2. **Abordagem de Tabelas Separadas**
-- **Tabela para Superclasse**: Crie uma tabela para a superclasse com os atributos comuns.
-- **Tabelas para Subclasses**: Crie tabelas separadas para cada subclasse, incluindo os atributos específicos e uma chave estrangeira que referencia a chave primária da superclasse.
+- **Tabela para Superclasse**: Crie uma tabela para a entidade pai e crie uma coluna para cada atributo comum.
+- **Tabelas para Subclasses**: Crie tabelas separadas para cada entidade filha, incluindo como coluna os atributos específicos e uma coluna adicional (chave estrangeira) que referencia a chave primária da tabela que representa entidade pai.
 
 #### 3. **Abordagem de Tabelas Totalmente Separadas**
 
-Crie tabelas separadas para cada entidade filha, incluindo os atributos específicos e os atributos oriundos da entidade pai. Neste caso, a generalização/especialização definida da etapa de modelagem conceitual (ER) será, formalmente, desfeita e pela perspectiva do modelo relacional as entidades filhas serão consideradas tabelas totalmente independentes e distintas.
+Crie tabelas separadas para cada entidade filha, incluindo como coluna os atributos específicos e os atributos oriundos da entidade pai. Neste caso, a generalização/especialização definida da etapa de modelagem conceitual (ER) será, formalmente, desfeita e pela perspectiva do modelo relacional as entidades filhas serão consideradas tabelas totalmente independentes e distintas.
 
 ### Exemplo Prático (Reflexo na etapa de Implementação Física)
 
