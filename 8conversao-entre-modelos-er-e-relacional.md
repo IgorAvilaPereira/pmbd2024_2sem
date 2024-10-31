@@ -9,7 +9,7 @@ Existem algumas regrinhas que devem ser aplicadas para fazer a conversão de um 
 Toda **entidade** do modelo ER vira uma **tabela** no modelo relacional. Essa tabela terá a mesma chave primária (identificador) e os mesmos atributos definidos na entidade.
 
 Caso a entidade tenha **atributos compostos**, eles devem ser decompostos (se ainda não foram).
-Por outro lado, uma boa prática seria separar os **atributos compostos** em novas tabelas. No exemplo, o **atributo composto** **endereço** poderia seria uma nova tabela com seus sub-atributos convertidos em colunas desta nova tabela. Além disso, haveria ainda a necessidade de uma chave estrangeira **FK** que referenciasse a chave primária de **Professor**. Esta **FK** seria, simultaneamente, chave estrangeira e chave primária da tabela de **endereço**.
+Por outro lado, uma outra possibilidade seria separar os **atributos compostos** em novas tabelas. No exemplo, o **atributo composto** **endereço** poderia seria uma nova tabela com seus sub-atributos convertidos em colunas desta nova tabela. Além disso, haveria ainda a necessidade de uma chave estrangeira **FK** que referenciasse a chave primária de **Professor**. Esta **FK** seria, simultaneamente, chave estrangeira e chave primária da tabela de **endereço**. Entretanto, deve-se atentar para continuar respeitando a cardinalidade definida anteriormente.
 
 Caso a entidade tenha atributos multivalorados, para cada atributo multivalorado cria-se uma nova tabela. A tabela correspondente ao atributo multivalorado vai ter como atributos o atributo multivalorado em sim + a chave primária da tabela onde o atributo multivalorado estava inserido (que vai passar como chave estrangeira para a nova tabela). As figuras abaixo apresentam um exemplo desta situação.
 
