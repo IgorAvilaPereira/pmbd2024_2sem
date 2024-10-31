@@ -18,8 +18,7 @@ Caso a entidade tenha atributos multivalorados, para cada atributo multivalorado
 
 ## Entidade Fraca
 
-Para cada entidade fraca do ER, é criada uma tabela no modelo relacional, incluindo todos os atributos da entidade fraca, mais a chave primária da entidade com a  qual a entidade fraca se relaciona (que passa como uma chave estrangeira). A chave primária desta nova tabela será composta por um ou mais atributos da entidade fraca mais a chave estrangeira.
-
+Para cada entidade fraca do ER, é criada uma tabela no modelo relacional, incluindo todos os atributos da entidade fraca, mais a chave primária da entidade com a  qual a entidade fraca se relaciona (que passa como uma chave estrangeira). A chave primária desta nova tabela será composta por um ou mais atributos da entidade fraca (geralmente o identificador parcial) + a chave estrangeira (coluna oriunda da chave primária resultante da conversão da entidade forte convertida em tabela relacionada com esta entidade fraca).
 
 ## Relacionamento N para N
 
