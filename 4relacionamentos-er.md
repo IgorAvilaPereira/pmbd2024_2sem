@@ -188,3 +188,6 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 # Resumo 
 
 ![image](https://github.com/user-attachments/assets/b54cb7cd-c4ab-4fc6-9fb1-0957aaa2b1fa)
+
+![image](https://github.com/user-attachments/assets/a35521b3-2b6b-4481-a7f4-c51f5785ac0a)
+
