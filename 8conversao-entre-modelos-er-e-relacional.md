@@ -167,3 +167,72 @@ CREATE TABLE Moto (
     ano INT
 );
 ```
+
+### EXTRA: No PostgreSQL
+
+No PostgreSQL, a generalização e especialização de tabelas são implementadas através do conceito de **herança de tabelas**. Aqui está um resumo de como isso funciona:
+
+### Herança de Tabelas no PostgreSQL
+
+A herança de tabelas permite que uma tabela (subclasse) herde a estrutura de outra tabela (superclasse). Isso é útil para modelar hierarquias de entidades, onde a superclasse contém atributos comuns e as subclasses contêm atributos específicos.
+
+#### Criando Tabelas com Herança
+Para criar uma tabela que herda de outra, você usa a cláusula `INHERITS`. Aqui está um exemplo prático:
+
+1. **Criar a Superclasse**:
+```sql
+CREATE TABLE Veiculo (
+    id SERIAL PRIMARY KEY,
+    placa VARCHAR(10),
+    ano INT
+);
+```
+
+2. **Criar as Subclasses**:
+```sql
+CREATE TABLE Carro (
+    numero_portas INT
+) INHERITS (Veiculo);
+
+CREATE TABLE Moto (
+    cilindradas INT
+) INHERITS (Veiculo);
+```
+
+### Consultas em Tabelas Herdadas
+Quando você consulta a tabela superclasse, por padrão, o PostgreSQL inclui dados das subclasses. Para consultar apenas a superclasse, você pode usar a cláusula `ONLY`:
+
+```sql
+SELECT * FROM ONLY Veiculo;
+```
+
+### Vantagens e Limitações
+- **Vantagens**: A herança de tabelas facilita a reutilização de estruturas de dados e a manutenção de integridade referencial.
+- **Limitações**: Algumas funcionalidades, como chaves estrangeiras e índices, podem não se comportar da mesma forma que em tabelas não herdadas.
+
+### Exemplo Completo
+Aqui está um exemplo completo que inclui inserção e consulta de dados:
+
+```sql
+-- Inserir dados na superclasse
+INSERT INTO Veiculo (placa, ano) VALUES ('ABC1234', 2020);
+
+-- Inserir dados nas subclasses
+INSERT INTO Carro (placa, ano, numero_portas) VALUES ('DEF5678', 2021, 4);
+INSERT INTO Moto (placa, ano, cilindradas) VALUES ('GHI9012', 2022, 150);
+
+-- Consultar dados da superclasse (inclui dados das subclasses)
+SELECT * FROM Veiculo;
+
+-- Consultar dados apenas da superclasse
+SELECT * FROM ONLY Veiculo;
+```
+
+Essa abordagem permite modelar de forma eficiente hierarquias de entidades no PostgreSQL, mantendo a flexibilidade e a integridade dos dados.
+
+Se precisar de mais detalhes:
+
+(1) Herança no PostgreSQL - DevMedia. https://www.devmedia.com.br/heranca-no-postgresql/10847.
+(2) Banco de dados: Generalização e especialização na Modelagem Conceitual. https://blog.grancursosonline.com.br/banco-de-dados-generalizacao-e-especializacao-na-modelagem-conceitual/.
+(3) Banco de Dados II: Generalização e Especialização (aula 3). https://pt.slideshare.net/slideshow/banco-de-dados-ii-generalizao-e-especializao-aula-3/57053731.
+(4) BANCO DE DADOS - docente.ifrn.edu.br. https://docente.ifrn.edu.br/elieziosoares/disciplinas/programacao-com-acesso-a-banco-de-dados/4-especializacao-entidade_associativa.
